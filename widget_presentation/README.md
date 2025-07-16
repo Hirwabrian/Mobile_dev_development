@@ -9,5 +9,5 @@ This Flutter demo shows how `ConstrainedBox` can **limit the growth** of a widge
 ## How to Run
 
 1. git clone the repository
-2. cd constrainedbox-demo
-3 .Run the Flutter app on emulator,phone or browser
+2. cd to the app folder
+3. Run the Flutter app on emulator,phone or browser
