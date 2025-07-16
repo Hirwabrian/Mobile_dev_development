@@ -14,8 +14,25 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class AnimatedBoxDemo extends StatelessWidget {
+class AnimatedBoxDemo extends StatefulWidget {
   const AnimatedBoxDemo({super.key});
+
+  @override
+  _AnimatedBoxDemoState createState() => _AnimatedBoxDemoState();
+}
+
+class _AnimatedBoxDemoState extends State<AnimatedBoxDemo> {
+  double _width = 100;
+  double _height = 100;
+  Color _color = Colors.blue;
+
+  void _toggleContainer() {
+    setState(() {
+      _width = _width == 100 ? 200 : 100;
+      _height = _height == 100 ? 200 : 100;
+      _color = _color == Colors.blue ? Colors.red : Colors.blue;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -23,12 +40,22 @@ class AnimatedBoxDemo extends StatelessWidget {
       appBar: AppBar(title: Text('AnimatedContainer Demo')),
       body: Center(
         child: GestureDetector(
-          onTap: () {},
+          onTap: _toggleContainer,
           child: AnimatedContainer(
             duration: Duration(seconds: 1),
-            width: 100,
-            height: 100,
-            color: Colors.blue,
+            width: _width,
+            height: _height,
+            color: _color,
+            child: Center(
+              child: Text(
+                'Tap Me!',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                ),
+              ),
+            ),
           ),
         ),
       ),
