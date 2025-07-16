@@ -5,6 +5,8 @@ void main() {
 }
 
 class TemperatureConverterApp extends StatelessWidget {
+  const TemperatureConverterApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -16,6 +18,8 @@ class TemperatureConverterApp extends StatelessWidget {
 }
 
 class TemperatureConverterScreen extends StatefulWidget {
+  const TemperatureConverterScreen({super.key});
+
   @override
   _TemperatureConverterScreenState createState() =>
       _TemperatureConverterScreenState();
@@ -28,7 +32,7 @@ class _TemperatureConverterScreenState
   final TextEditingController _tempController = TextEditingController();
   ConversionType _selectedConversion = ConversionType.fToC;
   String _convertedResult = '';
-  List<String> _conversionHistory = [];
+  final List<String> _conversionHistory = [];
 
   void _convertTemperature() {
     final input = double.tryParse(_tempController.text);
