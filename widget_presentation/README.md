@@ -1,16 +1,14 @@
-# widget_presentation
+# ConstrainedBox Demo: With vs. Without Constraints
 
-A new Flutter project.
+This Flutter demo shows how `ConstrainedBox` can **limit the growth** of a widget even when the child widget is trying to grow beyond the limit. This version compares it side-by-side with an unconstrained widget so the difference is visually striking.
 
-## Getting Started
+## Widget Summary
 
-This project is a starting point for a Flutter application.
+`ConstrainedBox` imposes **minimum and maximum size constraints** on its child. This is useful for layout control, especially when you want to avoid unbounded widget growth.
 
-A few resources to get you started if this is your first Flutter project:
+## How to Run
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. Steps:
+   git clone the repository
+   cd constrainedbox-demo
+   Run the Flutter app on emulator,phone or browser
